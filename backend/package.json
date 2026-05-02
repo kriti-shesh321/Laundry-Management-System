@@ -6,8 +6,7 @@
   "type": "commonjs",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "seed": "prisma db seed",
-    "build": "tsc",
+    "build": "prisma generate && tsc",
     "start": "node dist/server.js"
   },
   "keywords": [],
