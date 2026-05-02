@@ -18,9 +18,9 @@ Register a new customer.
 
 ```json
 {
-    "name": "Kei Izumi",
-    "phone": "+918456789876",
-    "email": "kei@example.com",
+    "name": "Chai Tzu",
+    "phone": "+7345678987",
+    "email": "chai@gmail.com",
     "password": "password123"
 }
 ```
@@ -29,12 +29,17 @@ Register a new customer.
 
 ```json
 {
-    "id": "uuid",
-    "name": "Kei Izumi",
-    "phone":"+918456789876",
-    "email": "kei@example.com",
-    "role": "CUSTOMER",
-    "createdAt": "timestamp" 
+    "success": true,
+    "data": {
+        "token": "token",
+        "user": {
+            "id": "id",
+            "name": "Chai Tzu",
+            "phone": "+7345678987",
+            "email": "chai@gmail.com",
+            "role": "CUSTOMER"
+        }
+    }
 }
 ```
 
@@ -55,7 +60,7 @@ Login for registered customers and seeded admin.
 
 ```json
 {
-    "email": "kei@example.com",
+    "email": "chai@gmail.com",
     "password": "password123"
 }
 ```
@@ -64,16 +69,17 @@ Login for registered customers and seeded admin.
 
 ```json
 {
-  "token": "jwt_token",
-  "user": {
-    "id": "uuid",
-    "name": "Kei Izumi",
-    "phone":"+918456789876",
-    "email": "kei@example.com",
-    "role": "CUSTOMER",
-    "createdAt": "timestamp",
-    "updatedAt": "timestamp"
-  }
+    "success": true,
+    "data": {
+        "token": "token",
+        "user": {
+            "id": "id",
+            "name": "Chai Tzu",
+            "phone": "+7345678987",
+            "email": "chai@gmail.com",
+            "role": "CUSTOMER"
+        }
+    }
 }
 ```
 ### Status Codes
@@ -99,13 +105,16 @@ Authorization: Bearer <token>
 ### Response
 ```json
 {
-    "id": "uuid",
-    "name": "Kei Izumi",
-    "phone":"+918456789876",
-    "email": "kei@example.com",
-    "role": "CUSTOMER",
-    "createdAt": "timestamp",
-    "updatedAt": "timestamp"
+    "success": true,
+    "data": {
+        "id": "id",
+        "name": "Chai Tzu",
+        "phone": "+7345678987",
+        "email": "chai@gmail.com",
+        "role": "CUSTOMER",
+        "createdAt": "timestamp",
+        "updatedAt": "timestamp"
+    }
 }
 ```
 ### Status Codes
@@ -135,15 +144,25 @@ Authorization: Bearer <token>
 
 ### Response
 ```json
-[
-    {
-        "id": "id",
-        "name": "Cotton Pants",
-        "basePrice": 15.0,
-        "createdAt": "timestamp",
-        "updatedAt": "timestamp"
-    }
-]
+{
+    "success": true,
+    "data": [
+        {
+            "id": "uuid",
+            "name": "Blazer",
+            "basePrice": 150,
+            "createdAt": "timestamp",
+            "updatedAt": "timestamp"
+        },
+        {
+            "id": "uuid",
+            "name": "Pants",
+            "basePrice": 80,
+            "createdAt": "timestamp",
+            "updatedAt": "timestamp"
+        },
+    ]
+}
 ```
 
 ### Status Codes
@@ -179,13 +198,16 @@ Authorization: Bearer <token>
 ### Response
 ```json
 {
-    "id": "uuid",
-    "userId": "uuid",
-    "totalAmount": 50.00,
-    "status": "RECEIVED",
-    "estimatedDeliveryDate": "date",
-    "createdAt": "timestamp",
-    "updatedAt": "timestamp"
+    "status": true,
+    "data": {
+        "id": "uuid",
+        "userId": "uuid",
+        "totalAmount": 50.00,
+        "status": "RECEIVED",
+        "estimatedDeliveryDate": "date",
+        "createdAt": "timestamp",
+        "updatedAt": "timestamp"
+        }
 }
 ```
 
@@ -357,14 +379,17 @@ Authorization: Bearer <token>
 ### Response
 ```json
 {
-    "totalOrders": 203,
-    "totalRevenue": 89947,
-    "orderPerStatus": [
-        { "status": "RECEIVED", "orders": 20 },
-        { "status": "PROCESSING", "orders": 100 },
-        { "status": "READY", "orders": 33 },
-        { "status": "DELIVERED", "orders": 50 }
-    ]
+    "success": true,
+    "data": {
+        "totalOrders": 2,
+        "totalRevenue": 760,
+        "ordersByStatus": {
+            "RECEIVED": 1,
+            "PROCESSING": 1,
+            "READY": 0,
+            "DELIVERED": 0
+        }
+    }
 }
 ```
 

@@ -1,5 +1,6 @@
 # dependencies
 node_modules/
+/src/generated/prisma
 
 # build output
 dist/
@@ -13,3 +14,6 @@ dist/
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
+
+# Internal documents
+docs/REF.md

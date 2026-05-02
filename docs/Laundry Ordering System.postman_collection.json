@@ -1,0 +1,1304 @@
+{
+	"info": {
+		"_postman_id": "03e4e35f-b893-41d2-bc67-8aaad16e4991",
+		"name": "Laundry Ordering System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17086606",
+		"_collection_link": "https://test44-4738.postman.co/workspace/test-Workspace~1e424714-dd83-4b78-8fb9-926335bd3fbf/collection/17086606-03e4e35f-b893-41d2-bc67-8aaad16e4991?action=share&source=collection_link&creator=17086606"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Chai Tzu\",\n    \"email\": \"chai@gmail.com\",\n    \"phone\": \"+7345678987\",\n    \"password\": \"qwertyuiop\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Chai Tzu\",\n    \"email\": \"chai@gmail.com\",\n    \"phone\": \"+7345678987\",\n    \"password\": \"qwertyuiop\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "383"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"17f-TvZqeuxHEmfBPhHorOslegUXHxU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 May 2026 11:42:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA5ZDRiNTFlLWNjYjYtNDJmNS05OGM4LTAyNzQ2MGI0ZjZiOCIsInJvbGUiOiJDVVNUT01FUiIsImlhdCI6MTc3NzYzNTczMCwiZXhwIjoxNzc4MjQwNTMwfQ.8NSRhHQFsY8MY2a64xEuzsw9GmBF-wIDG5aZDTdFxtQ\",\n        \"user\": {\n            \"id\": \"09d4b51e-ccb6-42f5-98c8-027460b4f6b8\",\n            \"name\": \"Chai Tzu\",\n            \"phone\": \"+7345678987\",\n            \"email\": \"chai@gmail.com\",\n            \"role\": \"CUSTOMER\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"rei@gmail.com\",\n    \"password\": \"qwertyuiop\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"chai@gmail.com\",\n    \"password\": \"qwertyuiop\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "383"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"17f-sly3cYM2olQVpbeskObCbTaSWvU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 May 2026 11:45:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA5ZDRiNTFlLWNjYjYtNDJmNS05OGM4LTAyNzQ2MGI0ZjZiOCIsInJvbGUiOiJDVVNUT01FUiIsImlhdCI6MTc3NzYzNTkxNSwiZXhwIjoxNzc4MjQwNzE1fQ.wVHxmAzvHgusrRlyCSVn8p2bnALUxq09JkZrDlek-1M\",\n        \"user\": {\n            \"id\": \"09d4b51e-ccb6-42f5-98c8-027460b4f6b8\",\n            \"name\": \"Chai Tzu\",\n            \"phone\": \"+7345678987\",\n            \"email\": \"chai@gmail.com\",\n            \"role\": \"CUSTOMER\"\n        }\n    }\n}"
+						},
+						{
+							"name": "Admin Success Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"rei@gmail.com\",\n    \"password\": \"qwertyuiop\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "376"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"178-uuaw/saFq6Z2bAG9PgEIZ0fpUzQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 May 2026 15:50:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NjczZWM1LWE3YmYtNDg2Ny04ZDI0LWZmZjU2M2M5MjM1MSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3NzY1MDY0NywiZXhwIjoxNzc4MjU1NDQ3fQ.J8_27ejdwejuhkip6LM9q5E9UHIHVs1hG7SWKJ1wqiA\",\n        \"user\": {\n            \"id\": \"67673ec5-a7bf-4867-8d24-fff563c92351\",\n            \"name\": \"Rei Sora\",\n            \"phone\": \"+56789876532\",\n            \"email\": \"rei@gmail.com\",\n            \"role\": \"ADMIN\"\n        }\n    }\n}"
+						},
+						{
+							"name": "Invalid Credentials Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"chai@gmail.com\",\n    \"password\": \"asdfghjkl\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "50"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"32-8CDs0izjtoxRLFKIO/azKlX23k4\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 May 2026 11:45:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Invalid credentials.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "User Details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "hghjjvbjn",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/v1/auth/me",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "230"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e6-q6JCVNZu2AWr3gwo7l7tEfXZTOc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 May 2026 11:47:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": \"09d4b51e-ccb6-42f5-98c8-027460b4f6b8\",\n        \"name\": \"Chai Tzu\",\n        \"phone\": \"+7345678987\",\n        \"email\": \"chai@gmail.com\",\n        \"role\": \"CUSTOMER\",\n        \"createdAt\": \"2026-05-01T11:42:10.257Z\",\n        \"updatedAt\": \"2026-05-01T11:42:10.257Z\"\n    }\n}"
+						},
+						{
+							"name": "Unauthorized Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/v1/auth/me",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"me"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-H4CLXoxSRMwDtqUCBiDzMCvYSTQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 May 2026 11:47:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Unauthorized\"\n}"
+						},
+						{
+							"name": "Un",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/v1/auth/me",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"me"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b-KdS1TpljvydXz3pImdPuLHCdSq8\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 May 2026 15:27:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Invalid token\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA5ZDRiNTFlLWNjYjYtNDJmNS05OGM4LTAyNzQ2MGI0ZjZiOCIsInJvbGUiOiJDVVNUT01FUiIsImlhdCI6MTc3NzYzNTkxNSwiZXhwIjoxNzc4MjQwNzE1fQ.wVHxmAzvHgusrRlyCSVn8p2bnALUxq09JkZrDlek-1M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orderItems\": [\n        { \"garmentTypeId\": \"2ee970a5-82f7-4f0e-92c8-7741d248dd2a\", \"quantity\": 2},\n        { \"garmentTypeId\": \"dd74348a-baad-40d0-9c29-c7e41b8f1d2d\", \"quantity\": 1}\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"orderItems\": [\n        { \"garmentTypeId\": \"2ee970a5-82f7-4f0e-92c8-7741d248dd2a\", \"quantity\": 2},\n        { \"garmentTypeId\": \"dd74348a-baad-40d0-9c29-c7e41b8f1d2d\", \"quantity\": 1}\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/orders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"orders"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "284"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"11c-OpVe6xX82y6jzXLIRnmtfSfzv4U\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 May 2026 12:29:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": \"9a79d98b-93a2-4aca-be2d-e0d2d8e9f536\",\n        \"userId\": \"09d4b51e-ccb6-42f5-98c8-027460b4f6b8\",\n        \"totalAmount\": 380,\n        \"status\": \"RECEIVED\",\n        \"estimatedDeliveryDate\": \"2026-05-03T12:29:56.269Z\",\n        \"createdAt\": \"2026-05-01T12:29:56.569Z\",\n        \"updatedAt\": \"2026-05-01T12:29:56.569Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Orders",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA5ZDRiNTFlLWNjYjYtNDJmNS05OGM4LTAyNzQ2MGI0ZjZiOCIsInJvbGUiOiJDVVNUT01FUiIsImlhdCI6MTc3NzYzNTkxNSwiZXhwIjoxNzc4MjQwNzE1fQ.wVHxmAzvHgusrRlyCSVn8p2bnALUxq09JkZrDlek-1M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/v1/orders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"orders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1837"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"72d-ChCJi9rnsA0RfuXIyce/L2ErewM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 May 2026 15:38:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": \"9a79d98b-93a2-4aca-be2d-e0d2d8e9f536\",\n            \"userId\": \"09d4b51e-ccb6-42f5-98c8-027460b4f6b8\",\n            \"totalAmount\": 380,\n            \"status\": \"RECEIVED\",\n            \"estimatedDeliveryDate\": \"2026-05-03T12:29:56.269Z\",\n            \"createdAt\": \"2026-05-01T12:29:56.569Z\",\n            \"updatedAt\": \"2026-05-01T12:29:56.569Z\",\n            \"user\": {\n                \"id\": \"09d4b51e-ccb6-42f5-98c8-027460b4f6b8\",\n                \"name\": \"Chai Tzu\",\n                \"phone\": \"+7345678987\"\n            },\n            \"orderItems\": [\n                {\n                    \"id\": \"d78f1afa-08c6-40ed-9e49-ca05f95b1de5\",\n                    \"orderId\": \"9a79d98b-93a2-4aca-be2d-e0d2d8e9f536\",\n                    \"garmentTypeId\": \"2ee970a5-82f7-4f0e-92c8-7741d248dd2a\",\n                    \"quantity\": 2,\n                    \"unitPrice\": 150,\n                    \"subTotal\": 300,\n                    \"garmentType\": {\n                        \"id\": \"2ee970a5-82f7-4f0e-92c8-7741d248dd2a\",\n                        \"name\": \"Blazer\"\n                    }\n                },\n                {\n                    \"id\": \"fdeed8e7-8668-4b44-8646-bc38b076cfe0\",\n                    \"orderId\": \"9a79d98b-93a2-4aca-be2d-e0d2d8e9f536\",\n                    \"garmentTypeId\": \"dd74348a-baad-40d0-9c29-c7e41b8f1d2d\",\n                    \"quantity\": 1,\n                    \"unitPrice\": 80,\n                    \"subTotal\": 80,\n                    \"garmentType\": {\n                        \"id\": \"dd74348a-baad-40d0-9c29-c7e41b8f1d2d\",\n                        \"name\": \"Pants\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": \"7c5ebdb0-9576-45bd-8325-b38fd7463d6c\",\n            \"userId\": \"09d4b51e-ccb6-42f5-98c8-027460b4f6b8\",\n            \"totalAmount\": 380,\n            \"status\": \"RECEIVED\",\n            \"estimatedDeliveryDate\": \"2026-05-03T12:25:29.435Z\",\n            \"createdAt\": \"2026-05-01T12:25:29.707Z\",\n            \"updatedAt\": \"2026-05-01T12:25:29.707Z\",\n            \"user\": {\n                \"id\": \"09d4b51e-ccb6-42f5-98c8-027460b4f6b8\",\n                \"name\": \"Chai Tzu\",\n                \"phone\": \"+7345678987\"\n            },\n            \"orderItems\": [\n                {\n                    \"id\": \"72f9090b-1db7-4332-acb0-8791616d6bd5\",\n                    \"orderId\": \"7c5ebdb0-9576-45bd-8325-b38fd7463d6c\",\n                    \"garmentTypeId\": \"2ee970a5-82f7-4f0e-92c8-7741d248dd2a\",\n                    \"quantity\": 2,\n                    \"unitPrice\": 150,\n                    \"subTotal\": 300,\n                    \"garmentType\": {\n                        \"id\": \"2ee970a5-82f7-4f0e-92c8-7741d248dd2a\",\n                        \"name\": \"Blazer\"\n                    }\n                },\n                {\n                    \"id\": \"7277f7da-58ae-45df-a9c2-aed3eb1b330c\",\n                    \"orderId\": \"7c5ebdb0-9576-45bd-8325-b38fd7463d6c\",\n                    \"garmentTypeId\": \"dd74348a-baad-40d0-9c29-c7e41b8f1d2d\",\n                    \"quantity\": 1,\n                    \"unitPrice\": 80,\n                    \"subTotal\": 80,\n                    \"garmentType\": {\n                        \"id\": \"dd74348a-baad-40d0-9c29-c7e41b8f1d2d\",\n                        \"name\": \"Pants\"\n                    }\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Order Status Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NjczZWM1LWE3YmYtNDg2Ny04ZDI0LWZmZjU2M2M5MjM1MSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3NzY1MDY0NywiZXhwIjoxNzc4MjU1NDQ3fQ.J8_27ejdwejuhkip6LM9q5E9UHIHVs1hG7SWKJ1wqiA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"PROCESSING\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/orders/9a79d98b-93a2-4aca-be2d-e0d2d8e9f536/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"9a79d98b-93a2-4aca-be2d-e0d2d8e9f536",
+								"status"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\": \"PROCESSING\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/orders/9a79d98b-93a2-4aca-be2d-e0d2d8e9f536/status",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"orders",
+										"9a79d98b-93a2-4aca-be2d-e0d2d8e9f536",
+										"status"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "286"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"11e-2zG7uvHsxVwHV46AQr2jPIKL1KA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 May 2026 15:52:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": \"9a79d98b-93a2-4aca-be2d-e0d2d8e9f536\",\n        \"userId\": \"09d4b51e-ccb6-42f5-98c8-027460b4f6b8\",\n        \"totalAmount\": 380,\n        \"status\": \"PROCESSING\",\n        \"estimatedDeliveryDate\": \"2026-05-03T12:29:56.269Z\",\n        \"createdAt\": \"2026-05-01T12:29:56.569Z\",\n        \"updatedAt\": \"2026-05-01T15:52:15.967Z\"\n    }\n}"
+						},
+						{
+							"name": "403 Response",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\": \"PROCESSING\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/orders/9a79d98b-93a2-4aca-be2d-e0d2d8e9f536/status",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"orders",
+										"9a79d98b-93a2-4aca-be2d-e0d2d8e9f536",
+										"status"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-cfwNqkx6Ig1gmHkzdOu2EdOViZ8\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 May 2026 15:47:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Forbidden\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Specific Order By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA5ZDRiNTFlLWNjYjYtNDJmNS05OGM4LTAyNzQ2MGI0ZjZiOCIsInJvbGUiOiJDVVNUT01FUiIsImlhdCI6MTc3NzYzNTkxNSwiZXhwIjoxNzc4MjQwNzE1fQ.wVHxmAzvHgusrRlyCSVn8p2bnALUxq09JkZrDlek-1M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/orders/9a79d98b-93a2-4aca-be2d-e0d2d8e9f536",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"9a79d98b-93a2-4aca-be2d-e0d2d8e9f536"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/v1/orders/9a79d98b-93a2-4aca-be2d-e0d2d8e9f536",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"orders",
+										"9a79d98b-93a2-4aca-be2d-e0d2d8e9f536"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1136"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"470-Ez8p+YPN7dWc+wmv3fQxRDpk8qE\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 May 2026 15:56:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": \"9a79d98b-93a2-4aca-be2d-e0d2d8e9f536\",\n        \"userId\": \"09d4b51e-ccb6-42f5-98c8-027460b4f6b8\",\n        \"totalAmount\": 380,\n        \"status\": \"PROCESSING\",\n        \"estimatedDeliveryDate\": \"2026-05-03T12:29:56.269Z\",\n        \"createdAt\": \"2026-05-01T12:29:56.569Z\",\n        \"updatedAt\": \"2026-05-01T15:52:15.967Z\",\n        \"user\": {\n            \"id\": \"09d4b51e-ccb6-42f5-98c8-027460b4f6b8\",\n            \"name\": \"Chai Tzu\",\n            \"phone\": \"+7345678987\",\n            \"role\": \"CUSTOMER\"\n        },\n        \"orderItems\": [\n            {\n                \"id\": \"d78f1afa-08c6-40ed-9e49-ca05f95b1de5\",\n                \"orderId\": \"9a79d98b-93a2-4aca-be2d-e0d2d8e9f536\",\n                \"garmentTypeId\": \"2ee970a5-82f7-4f0e-92c8-7741d248dd2a\",\n                \"quantity\": 2,\n                \"unitPrice\": 150,\n                \"subTotal\": 300,\n                \"garmentType\": {\n                    \"id\": \"2ee970a5-82f7-4f0e-92c8-7741d248dd2a\",\n                    \"name\": \"Blazer\",\n                    \"basePrice\": 150,\n                    \"createdAt\": \"2026-04-30T20:22:59.867Z\",\n                    \"updatedAt\": \"2026-04-30T20:22:59.867Z\"\n                }\n            },\n            {\n                \"id\": \"fdeed8e7-8668-4b44-8646-bc38b076cfe0\",\n                \"orderId\": \"9a79d98b-93a2-4aca-be2d-e0d2d8e9f536\",\n                \"garmentTypeId\": \"dd74348a-baad-40d0-9c29-c7e41b8f1d2d\",\n                \"quantity\": 1,\n                \"unitPrice\": 80,\n                \"subTotal\": 80,\n                \"garmentType\": {\n                    \"id\": \"dd74348a-baad-40d0-9c29-c7e41b8f1d2d\",\n                    \"name\": \"Pants\",\n                    \"basePrice\": 80,\n                    \"createdAt\": \"2026-04-30T20:22:56.845Z\",\n                    \"updatedAt\": \"2026-04-30T20:22:56.845Z\"\n                }\n            }\n        ]\n    }\n}"
+						},
+						{
+							"name": "404 Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/v1/orders/9a79d98b-93a2-4aca-be2d-e0d2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"orders",
+										"9a79d98b-93a2-4aca-be2d-e0d2"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "45"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2d-Soa8+hsCo8QgaePqBprvpHzFdVw\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 May 2026 15:57:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Order not found\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Garment Types",
+			"item": [
+				{
+					"name": "Get Garment Types",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA5ZDRiNTFlLWNjYjYtNDJmNS05OGM4LTAyNzQ2MGI0ZjZiOCIsInJvbGUiOiJDVVNUT01FUiIsImlhdCI6MTc3NzYzNTkxNSwiZXhwIjoxNzc4MjQwNzE1fQ.wVHxmAzvHgusrRlyCSVn8p2bnALUxq09JkZrDlek-1M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/garment-types",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"garment-types"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/v1/garment-types",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"garment-types"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "799"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"31f-J7MJIt8QlTeUawrXZ7cMOuwncQg\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 May 2026 12:21:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": \"2ee970a5-82f7-4f0e-92c8-7741d248dd2a\",\n            \"name\": \"Blazer\",\n            \"basePrice\": 150,\n            \"createdAt\": \"2026-04-30T20:22:59.867Z\",\n            \"updatedAt\": \"2026-04-30T20:22:59.867Z\"\n        },\n        {\n            \"id\": \"dd74348a-baad-40d0-9c29-c7e41b8f1d2d\",\n            \"name\": \"Pants\",\n            \"basePrice\": 80,\n            \"createdAt\": \"2026-04-30T20:22:56.845Z\",\n            \"updatedAt\": \"2026-04-30T20:22:56.845Z\"\n        },\n        {\n            \"id\": \"f13b6a21-fc41-486c-b3e0-33f2278d49b0\",\n            \"name\": \"Saree\",\n            \"basePrice\": 120,\n            \"createdAt\": \"2026-04-30T20:22:58.692Z\",\n            \"updatedAt\": \"2026-04-30T20:22:58.692Z\"\n        },\n        {\n            \"id\": \"6a9cadb5-1b11-466b-a124-b499d2dd2958\",\n            \"name\": \"Shirt\",\n            \"basePrice\": 50,\n            \"createdAt\": \"2026-04-30T20:22:54.863Z\",\n            \"updatedAt\": \"2026-04-30T20:22:54.863Z\"\n        },\n        {\n            \"id\": \"da67ba94-4062-4fde-a548-14184ecaf073\",\n            \"name\": \"Whites\",\n            \"basePrice\": 60,\n            \"createdAt\": \"2026-04-30T20:23:01.009Z\",\n            \"updatedAt\": \"2026-04-30T20:23:01.009Z\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Dashboard",
+			"item": [
+				{
+					"name": "Dashboard Summary",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA5ZDRiNTFlLWNjYjYtNDJmNS05OGM4LTAyNzQ2MGI0ZjZiOCIsInJvbGUiOiJDVVNUT01FUiIsImlhdCI6MTc3NzYzNTkxNSwiZXhwIjoxNzc4MjQwNzE1fQ.wVHxmAzvHgusrRlyCSVn8p2bnALUxq09JkZrDlek-1M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/dashboard/summary",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"dashboard",
+								"summary"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/v1/dashboard/summary",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"dashboard",
+										"summary"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "131"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"83-gf6EDmC2NBcChL8WbZUicjgN840\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 May 2026 16:35:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"totalOrders\": 2,\n        \"totalRevenue\": 760,\n        \"ordersByStatus\": {\n            \"RECEIVED\": 1,\n            \"PROCESSING\": 1,\n            \"READY\": 0,\n            \"DELIVERED\": 0\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

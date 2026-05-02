@@ -1,0 +1,85 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Role {
+  ADMIN
+  CUSTOMER
+}
+
+enum OrderStatus {
+  RECEIVED
+  PROCESSING
+  READY
+  DELIVERED
+}
+
+model User {
+  id        String   @id @default(uuid())
+  name      String
+  phone     String   @unique
+  email     String   @unique
+  password  String
+  role      Role     @default(CUSTOMER)
+
+  orders    Order[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([email])
+  @@index([phone])
+}
+
+model GarmentType {
+  id          String      @id @default(uuid())
+  name        String      @unique
+  basePrice   Float
+
+  orderItems  OrderItem[]
+
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+}
+
+model Order {
+  id                      String        @id @default(uuid())
+
+  userId              String
+  user                User          @relation(fields: [userId], references: [id])
+
+  totalAmount             Float
+  status                  OrderStatus   @default(RECEIVED)
+
+  estimatedDeliveryDate   DateTime
+
+  orderItems              OrderItem[]
+
+  createdAt               DateTime      @default(now())
+  updatedAt               DateTime      @updatedAt
+
+  @@index([userId])
+  @@index([status])
+  @@index([createdAt])
+}
+
+model OrderItem {
+  id              String        @id @default(uuid())
+
+  orderId         String
+  order           Order         @relation(fields: [orderId], references: [id])
+
+  garmentTypeId   String
+  garmentType     GarmentType  @relation(fields: [garmentTypeId], references: [id])
+
+  quantity        Int
+  unitPrice       Float
+  subTotal        Float
+
+  @@index([orderId])
+  @@index([garmentTypeId])
+}
